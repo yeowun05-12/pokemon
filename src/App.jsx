@@ -8,6 +8,7 @@ import Search from './pages/Search';
 import Detail from './pages/Detail';
 import Favorites from './pages/Favorites';
 import 'galmuri/dist/galmuri.css';
+import { LikeProvider } from './pages/LikeProvider';
 
 function App() {
   const dispatch = useDispatch();
@@ -31,16 +32,18 @@ function App() {
             검색
           </Link>
           <Link className='nav_content' to={'/favorites'}>
-            찜목록♡
+            찜목록
           </Link>
         </div>
       </nav>
-      <Routes>
-        <Route path={'/'} element={<Main />} />
-        <Route path={'/search'} element={<Search />} />
-        <Route path={'/detail/:pokemonId'} element={<Detail />} />
-        <Route path={'/favorites'} element={<Favorites />} />
-      </Routes>
+      <LikeProvider>
+        <Routes>
+          <Route path={'/'} element={<Main />} />
+          <Route path={'/search'} element={<Search />} />
+          <Route path={'/detail/:pokemonId'} element={<Detail />} />
+          <Route path={'/favorites'} element={<Favorites />} />
+        </Routes>
+      </LikeProvider>
     </main>
   );
 }

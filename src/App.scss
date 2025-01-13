@@ -67,16 +67,23 @@ main {
         align-items: center;
         list-style-type: none;
         width: 200px;
-        height: 255px;
+        height: 260px;
         background-color: white;
         border-radius: 5px;
         box-shadow: 5px 5px;
-        gap: 8px;
+        gap: 7px;
         img {
           width: 150px;
         }
         p {
           font-size: 13px;
+          color: gray;
+        }
+        .like {
+          font-size: 16px;
+        }
+        .like:hover {
+          cursor: pointer;
         }
       }
 
@@ -102,7 +109,7 @@ main {
       margin-top: 40px;
       text-align: center;
       h2 {
-        margin-top: 70px;
+        margin-top: 50px;
         padding-top: 30px;
         font-size: 27px;
       }
@@ -125,6 +132,16 @@ main {
         top: 50px;
       }
       .reverse:hover {
+        cursor: pointer;
+      }
+      .detail_like {
+        display: inline;
+        position: relative;
+        top: 30px;
+        right: -350px;
+        font-size: 22px;
+      }
+      .detail_like:hover {
         cursor: pointer;
       }
     }
