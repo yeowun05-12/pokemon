@@ -15,7 +15,8 @@ export default function Main() {
         {pokemonData.date &&
           pokemonData.date.map((el) => (
             <li key={el.id} onClick={() => navigate(`/detail/${el.id}`)}>
-              <p className='like'
+              <p
+                className='like'
                 onClick={(e) => {
                   e.stopPropagation(); // 부모로 버블링 막기
                   setLike((prev) => ({

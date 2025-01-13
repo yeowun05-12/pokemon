@@ -54,7 +54,7 @@ main {
     height: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 40px;
+    padding-top: 70px;
     ul {
       display: flex;
       justify-content: space-between;
@@ -143,6 +143,57 @@ main {
       }
       .detail_like:hover {
         cursor: pointer;
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 100px;
+  }
+
+  .favorites_container {
+    width: 80vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        width: 200px;
+        height: 260px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 5px 5px;
+        gap: 7px;
+        img {
+          width: 150px;
+        }
+        p {
+          font-size: 13px;
+          color: gray;
+        }
+        .like {
+          font-size: 16px;
+        }
+        .like:hover {
+          cursor: pointer;
+        }
+      }
+
+      li:hover {
+        transform: scale(1.05);
+        transform-origin: center;
+        transition: transform 0.3s ease;
       }
     }
   }

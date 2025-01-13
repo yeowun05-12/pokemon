@@ -9,6 +9,7 @@ import Detail from './pages/Detail';
 import Favorites from './pages/Favorites';
 import 'galmuri/dist/galmuri.css';
 import { LikeProvider } from './pages/LikeProvider';
+import Footer from './pages/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -44,6 +45,7 @@ function App() {
           <Route path={'/favorites'} element={<Favorites />} />
         </Routes>
       </LikeProvider>
+      <Footer />
     </main>
   );
 }
