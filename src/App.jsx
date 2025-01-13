@@ -11,15 +11,13 @@ import 'galmuri/dist/galmuri.css';
 
 function App() {
   const dispatch = useDispatch();
-  const pokemonData = useSelector((state) => state.pokemon);
-  console.log(pokemonData);
+
   useEffect(() => {
     dispatch(fetchMultiplePokemonById(151));
   }, []);
 
   return (
     <main>
-      <div className='red_box'></div>
       <h1>포켓몬 도감</h1>
       <nav>
         <div className='menu_content'>
@@ -40,7 +38,7 @@ function App() {
       <Routes>
         <Route path={'/'} element={<Main />} />
         <Route path={'/search'} element={<Search />} />
-        <Route path={'/detail/:pokemon'} element={<Detail />} />
+        <Route path={'/detail/:pokemonId'} element={<Detail />} />
         <Route path={'/favorites'} element={<Favorites />} />
       </Routes>
     </main>
