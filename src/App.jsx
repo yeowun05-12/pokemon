@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMultiplePokemonById } from './RTK/thunk';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Main from './pages/Main';
 import Search from './pages/Search';
 import Detail from './pages/Detail';
@@ -15,6 +15,8 @@ function App() {
   const dispatch = useDispatch();
   const pokemonData = useSelector((state) => state.pokemon);
   const [searchTerm, setSearchTerm] = useState('');
+  console.log(pokemonData);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchMultiplePokemonById(151));
@@ -39,6 +41,7 @@ function App() {
             <input
               type='text'
               value={searchTerm}
+              onClick={() => navigate(`/search`)}
               onChange={(e) => {
                 setSearchTerm(e.target.value);
               }}

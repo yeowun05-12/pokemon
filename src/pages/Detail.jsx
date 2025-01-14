@@ -12,7 +12,7 @@ export default function Detail() {
   return (
     <>
       <div className='detail_container'>
-        {pokemonData.date
+        {pokemonData.data
           ?.filter((el) => el.id === parseInt(pokemonId))
           .map((el) => (
             <div key={el.id} className='detail_content'>

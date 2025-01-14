@@ -12,7 +12,7 @@ export default function Main() {
   return (
     <div className='main_container'>
       <ul>
-        {pokemonData.date?.map((el) => (
+        {pokemonData.data?.map((el) => (
           <li key={el.id} onClick={() => navigate(`/detail/${el.id}`)}>
             <p
               className='like'

@@ -12,8 +12,8 @@ const Favorites = () => {
     <>
       <div className='favorites_container'>
         <ul>
-          {pokemonData.date &&
-            pokemonData.date
+          {pokemonData.data &&
+            pokemonData.data
               .filter((el) => like[el.id])
               .map((el) => (
                 <li key={el.id} onClick={() => navigate(`/detail/${el.id}`)}>

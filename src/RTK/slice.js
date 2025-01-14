@@ -19,7 +19,7 @@ export const pokemonSlice = createSlice({
       })
       .addCase(fetchMultiplePokemonById.fulfilled, (state, action) => {
         state.loading = false;
-        state.date = action.payload;
+        state.data = action.payload;
       });
   }, // 비동기적 상태 변경
 }); // =>action과 reducer가 만들어짐
