@@ -35,7 +35,7 @@ main {
     background-color: white;
     .menu_content {
       display: flex;
-      width: 50vw;
+      width: 30vw;
       height: 37px;
       align-items: center;
       font-size: 18px;
@@ -43,6 +43,19 @@ main {
       .nav_content {
         text-decoration: none;
         color: black;
+      }
+      //검색창 관련 내용
+      label {
+        margin-right: 7px;
+      }
+      input {
+        border-bottom: 1px solid #a2a2a2;
+
+        padding: 0 5px;
+      }
+      input:focus {
+        outline: none;
+        box-shadow: 0 2px 3px rgb(0 0 0 / 20%);
       }
     }
   }
@@ -153,6 +166,52 @@ main {
   }
 
   .favorites_container {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        width: 200px;
+        height: 260px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 5px 5px;
+        gap: 7px;
+        img {
+          width: 150px;
+        }
+        p {
+          font-size: 13px;
+          color: gray;
+        }
+        .like {
+          font-size: 16px;
+        }
+        .like:hover {
+          cursor: pointer;
+        }
+      }
+
+      li:hover {
+        transform: scale(1.05);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  .search_container {
     width: 80vw;
     height: 100%;
     display: flex;
